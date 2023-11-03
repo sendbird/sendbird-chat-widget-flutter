@@ -16,5 +16,6 @@ class SbAction {
     this.alterData,
   });
 
-  factory SbAction.fromJson(Map<String, dynamic> json) => _$SbActionFromJson(json);
+  factory SbAction.fromJson(Map<String, dynamic> json) =>
+      _$SbActionFromJson(json);
 }

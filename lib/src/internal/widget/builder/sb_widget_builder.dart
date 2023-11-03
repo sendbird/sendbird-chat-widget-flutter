@@ -25,12 +25,12 @@ class SbWidgetBuilder {
   // [theme.notification.radius] Apply to the body
   // [theme.components.textButton.radius] Apply to the TextButton
   static Widget buildNotificationBubbleWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbTheme theme,
     required SbThemeMode themeMode,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?
@@ -63,13 +63,13 @@ class SbWidgetBuilder {
   }
 
   static List<Widget> _buildBodyItems({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required List<SbView> views,
     required SbTheme theme,
     required SbThemeMode themeMode,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?
@@ -94,14 +94,14 @@ class SbWidgetBuilder {
   }
 
   static Widget? buildWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbBox? parentView,
     required SbView view,
     required SbTheme theme,
     required SbThemeMode themeMode,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?
@@ -299,11 +299,11 @@ class SbWidgetBuilder {
   }
 
   static Widget tryToAddGestureDetector({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbView view,
     required Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?
@@ -326,11 +326,11 @@ class SbWidgetBuilder {
   }
 
   static void onViewClicked({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbView view,
     required Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?
@@ -346,7 +346,7 @@ class SbWidgetBuilder {
         'template_key': template.key,
         'channel_url': message.channelUrl,
         'tags': message.notificationData?.tags ?? [],
-        'message_id': message.messageId,
+        'message_id': message.notificationId,
         'source': 'notification',
         'message_ts': message.createdAt,
       };

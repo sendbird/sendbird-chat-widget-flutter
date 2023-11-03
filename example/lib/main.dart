@@ -7,11 +7,12 @@ void main() async {
   await SendbirdChatWidget.cacheNotificationInfo();
 
   // 2. Build a notification bubble widget in your chat view for notifications
-  final message = BaseMessage.fromJson({}); // Temporary code for compile
+  final message =
+      NotificationMessage.fromJson({}); // Temporary code for compile
 
   final notificationBubbleWidget =
       SendbirdChatWidget.buildNotificationBubbleWidget(
-    // This value have to be a message in messageList in NotificationCollection.
+    // This value must be a message in messageList in NotificationCollection.
     message: message,
     onClick: (message, view, action) {
       // Handle click event with action.type and action.data

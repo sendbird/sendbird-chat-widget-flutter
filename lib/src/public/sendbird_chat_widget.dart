@@ -42,7 +42,7 @@ enum NotificationWidgetError {
 /// SendbirdChatWidget
 class SendbirdChatWidget {
   /// sdkVersion
-  static const sdkVersion = '1.0.0';
+  static const sdkVersion = '1.0.1';
 
   static final SendbirdChatWidget _instance = SendbirdChatWidget._();
 
@@ -116,10 +116,10 @@ class SendbirdChatWidget {
   /// [themeMode] is only applied when the theme colors setting is `Use both light and dark themes`
   /// on [Sendbird Dashboard](https://dashboard.sendbird.com).
   static Widget? buildNotificationBubbleWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required Function(NotificationWidgetError error) onError,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       NotificationView view,
       NotificationAction action,
     )?
