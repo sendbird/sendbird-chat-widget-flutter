@@ -36,8 +36,8 @@ Create a dependency and add the following code to your package's `pubspec.yaml` 
 
 ```yaml
 dependencies:
-  sendbird_chat_sdk: ^4.0.12
-  sendbird_chat_widget: ^1.0.0
+  sendbird_chat_sdk: ^4.1.0
+  sendbird_chat_widget: ^1.0.1
 ```
 
 ### Step 2. Install packages
@@ -104,8 +104,7 @@ Once sessionHandlers have been set, we can authenticate to the Sendbird servers 
 
 ```dart
 try {
-  final user = await SendbirdChat.authenticateFeed(USER_ID, accessToken:
-SESSION_TOKEN);
+  final user = await SendbirdChat.authenticateFeed(USER_ID, accessToken: SESSION_TOKEN);
   // The user is authenticated but WebSocket is not connected.
 } catch (e) {
   // Handle error.
@@ -135,15 +134,15 @@ collection.initialize();
 class MyNotificationCollectionHandler extends NotificationCollectionHandler {
   @override
   void onMessagesAdded(NotificationContext context, FeedChannel channel,
-      List<BaseMessage> messages) {}
+      List<NotificationMessage> messages) {}
 
   @override
   void onMessagesUpdated(NotificationContext context, FeedChannel channel,
-      List<BaseMessage> messages) {}
+      List<NotificationMessage> messages) {}
 
   @override
   void onMessagesDeleted(NotificationContext context, FeedChannel channel,
-      List<BaseMessage> messages) {}
+      List<NotificationMessage> messages) {}
 
   @override
   void onChannelUpdated(FeedChannelContext context, FeedChannel channel) {}

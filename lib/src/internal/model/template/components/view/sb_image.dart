@@ -27,5 +27,6 @@ class SbImage extends SbView {
     this.metaData,
   });
 
-  factory SbImage.fromJson(Map<String, dynamic> json) => _$SbImageFromJson(json);
+  factory SbImage.fromJson(Map<String, dynamic> json) =>
+      _$SbImageFromJson(json);
 }

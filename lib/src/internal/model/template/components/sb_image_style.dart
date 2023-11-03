@@ -6,7 +6,8 @@ part 'sb_image_style.g.dart';
 
 @JsonSerializable()
 class SbImageStyle {
-  final String contentMode; // Default: 'aspectFit', 'aspectFill', 'scalesToFill'
+  final String
+      contentMode; // Default: 'aspectFit', 'aspectFill', 'scalesToFill'
   String? tintColor; // for ImageButton
 
   SbImageStyle({

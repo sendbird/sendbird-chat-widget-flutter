@@ -30,5 +30,6 @@ class SbTheme {
     required this.updatedAt,
   });
 
-  factory SbTheme.fromJson(Map<String, dynamic> json) => _$SbThemeFromJson(json);
+  factory SbTheme.fromJson(Map<String, dynamic> json) =>
+      _$SbThemeFromJson(json);
 }

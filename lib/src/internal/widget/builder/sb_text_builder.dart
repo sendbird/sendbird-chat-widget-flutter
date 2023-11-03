@@ -13,13 +13,13 @@ import 'package:sendbird_chat_widget/src/internal/widget/sb_widget_utils.dart';
 
 class SbTextBuilder {
   static Widget? buildTextWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbText text,
     required SbTheme theme,
     required SbThemeMode themeMode,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?

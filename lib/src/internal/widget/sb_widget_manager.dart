@@ -20,13 +20,13 @@ import 'package:sendbird_chat_widget/src/internal/widget/sb_widget_utils.dart';
 
 class SbWidgetManager {
   Widget buildNotificationBubbleWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbThemeMode themeMode,
     required SbSettings settings,
     required SbTemplate template,
     required NotificationData notificationData,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?

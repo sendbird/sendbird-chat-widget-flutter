@@ -14,5 +14,6 @@ class SbAlign {
     required this.vertical,
   });
 
-  factory SbAlign.fromJson(Map<String, dynamic> json) => _$SbAlignFromJson(json);
+  factory SbAlign.fromJson(Map<String, dynamic> json) =>
+      _$SbAlignFromJson(json);
 }

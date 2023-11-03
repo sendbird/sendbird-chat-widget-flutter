@@ -13,13 +13,13 @@ import 'package:sendbird_chat_widget/src/internal/widget/sb_widget_utils.dart';
 
 class SbImageBuilder {
   static Widget? buildImageWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbImage image,
     required SbTheme theme,
     required SbThemeMode themeMode,
     Function(
-      BaseMessage message,
+      NotificationMessage message,
       SbView view,
       SbAction action,
     )?

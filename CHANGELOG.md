@@ -1,3 +1,8 @@
+## v1.0.1 (Nov 3, 2023)
+
+### Features
+- Modified `buildNotificationBubbleWidget()` in `SendbirdChatWidget`
+
 ## v1.0.0 (Sep 20, 2023)
 
 ### Features

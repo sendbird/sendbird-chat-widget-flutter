@@ -14,18 +14,18 @@ import 'package:sendbird_chat_widget/src/internal/widget/sb_widget_utils.dart';
 
 class SbBoxBuilder {
   static Widget? buildBoxWidget({
-    required BaseMessage message,
+    required NotificationMessage message,
     required SbTemplate template,
     required SbView? parentView,
     required SbBox box,
     required SbTheme theme,
     required SbThemeMode themeMode,
     Function(
-        BaseMessage message,
-        SbView view,
-        SbAction action,
-        )?
-    onClick,
+      NotificationMessage message,
+      SbView view,
+      SbAction action,
+    )?
+        onClick,
   }) {
     // String layout
     // List<View>? items
