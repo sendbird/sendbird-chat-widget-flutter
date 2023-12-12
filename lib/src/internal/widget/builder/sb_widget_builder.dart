@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:sendbird_chat_sdk/sendbird_chat_sdk.dart';
-import 'package:sendbird_chat_sdk/src/internal/main/stats/sendbird_statistics.dart';
 import 'package:sendbird_chat_widget/src/internal/model/settings/sb_theme.dart';
 import 'package:sendbird_chat_widget/src/internal/model/template/components/sb_action.dart';
 import 'package:sendbird_chat_widget/src/internal/model/template/components/view/sb_box.dart';
@@ -340,17 +339,10 @@ class SbWidgetBuilder {
       // Click event
       onClick(message, view, view.action!);
 
-      // Click log
-      final Map<String, dynamic> data = {
-        'action': 'clicked',
-        'template_key': template.key,
-        'channel_url': message.channelUrl,
-        'tags': message.notificationData?.tags ?? [],
-        'message_id': message.notificationId,
-        'source': 'notification',
-        'message_ts': message.createdAt,
-      };
-      SendbirdStatistics.appendStat(type: 'noti:stats', data: data);
+      try {
+        FeedChannel.getChannel(message.channelUrl)
+            .then((channel) => channel.markAsClicked([message]));
+      } catch (_) {}
     }
   }
 }
