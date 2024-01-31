@@ -36,8 +36,8 @@ Create a dependency and add the following code to your package's `pubspec.yaml` 
 
 ```yaml
 dependencies:
-  sendbird_chat_sdk: ^4.1.2
-  sendbird_chat_widget: ^1.0.3
+  sendbird_chat_sdk: ^4.2.0
+  sendbird_chat_widget: ^1.0.4
 ```
 
 ### Step 2. Install packages

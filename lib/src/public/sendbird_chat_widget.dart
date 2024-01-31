@@ -42,7 +42,7 @@ enum NotificationWidgetError {
 /// SendbirdChatWidget
 class SendbirdChatWidget {
   /// sdkVersion
-  static const sdkVersion = '1.0.3';
+  static const sdkVersion = '1.0.4';
 
   static final SendbirdChatWidget _instance = SendbirdChatWidget._();
 
