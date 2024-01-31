@@ -1,3 +1,8 @@
+## v1.0.4 (Jan 31, 2024)
+
+### Improvements
+- Updated `sendbird_chat_sdk` package to `4.2.0`
+
 ## v1.0.3 (Dev 12, 2023)
 
 ### Improvements
